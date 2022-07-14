@@ -10,17 +10,17 @@
 
 #### localhost:3001/api/heartbeat [GET]
 
-returns 200 status code and the following JSON `{ "message": "api up and running"}`
+- returns 200 status code and the following JSON `{ "message": "api up and running"}`
 
 #### localhost:3001/api/groceryitems [GET]
 
-returns 200 status code and all the grocery items from the data base along with the number of results
+- returns 200 status code and all the grocery items from the data base along with the number of results
 
 #### can add queries to url to filter results
 
-q=[string that searches through the names of grocery items]
-store=[must be walmart or marketstreet] -> will add more later
-minor_category=[must be chicken or groundBeef] -> will add more later
+- q=[string that searches through the names of grocery items] \n
+- store=[must be walmart or marketstreet] -> will add more later \n
+- minor_category=[must be chicken or groundBeef] -> will add more later \n
 
 ### example request
 
