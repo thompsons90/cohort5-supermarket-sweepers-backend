@@ -1,0 +1,76 @@
+{
+  "groceryItems": [
+    {
+      "name": "93% Ground Beef Family Pack",
+      "unitSize": "2.5 lb",
+      "totalPrice": 15.48,
+      "pricePerOz": 0.39,
+      "store": "marketstreet",
+      "mainCategory": "meat",
+      "minorCategory": "groundBeef"
+    },
+    {
+      "name": "93% Ground Beef Small Pack",
+      "unitSize": "1.2 lb",
+      "totalPrice": 7.55,
+      "pricePerOz": 0.39,
+      "store": "marketstreet",
+      "mainCategory": "meat",
+      "minorCategory": "groundBeef"
+    },
+    {
+      "name": "Boneless Skinless Chicken Thigh Fillets",
+      "unitSize": "3 lb",
+      "totalPrice": 8.97,
+      "pricePerOz": 0.19,
+      "store": "marketstreet",
+      "mainCategory": "meat",
+      "minorCategory": "chicken"
+    },
+    {
+      "name": "Chicken Breast Fillets Boneless",
+      "unitSize": "3 lb",
+      "totalPrice": 14.97,
+      "pricePerOz": 0.31,
+      "store": "marketstreet",
+      "mainCategory": "meat",
+      "minorCategory": "chicken"
+    },
+    {
+      "name": "93% Ground Beef 1lb",
+      "unitSize": "1 lb",
+      "totalPrice": 6.23,
+      "pricePerOz": 0.39,
+      "store": "walmart",
+      "mainCategory": "meat",
+      "minorCategory": "groundBeef"
+    },
+    {
+      "name": "93% Ground Beef 2.25lb",
+      "unitSize": "2.25 lb",
+      "totalPrice": 12.96,
+      "pricePerOz": 0.36,
+      "store": "walmart",
+      "mainCategory": "meat",
+      "minorCategory": "groundBeef"
+    },
+    {
+      "name": "Boneless SkinLess Chicken Thighs Family Pack",
+      "unitSize": "4.7 - 5.6lb",
+      "totalPrice": 13.59,
+      "pricePerOz": 0.19,
+      "store": "walmart",
+      "mainCategory": "meat",
+      "minorCategory": "chicken"
+    },
+    {
+      "name": "Boneless Chicken Breasts Family Pack",
+      "unitSize": "4.7 6.25lb",
+      "totalPrice": 15.02,
+      "pricePerOz": 0.18,
+      "store": "walmart",
+      "mainCategory": "meat",
+      "minorCategory": "chicken"
+    }
+  ]
+}

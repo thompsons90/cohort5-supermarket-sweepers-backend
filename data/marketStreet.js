@@ -76,9 +76,11 @@ const getMSMeatData = async () => {
       meatData.push({
         name: itemTitles[index].innerHTML,
         size: itemSizes[index].innerHTML,
-        prices: itemPrices[index].innerHTML,
+        totalPrice: itemPrices[index].innerHTML,
+        pricePerOz: '',
         store: 'marketStreet',
-        category: 'groundBeef',
+        mainCategory: 'groundBeef',
+        minorCategory: 'groundBeef',
       });
     });
 
