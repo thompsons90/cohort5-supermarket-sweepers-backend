@@ -6,7 +6,7 @@ const getMarketStreetMeatData = async () => {
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
   console.log('browser started');
-  await page.goto(process.env.MARKET_STREET_URL, {
+  await page.goto('https://www.marketstreetunited.com/rs/store-locator/6100-w-eldorado-parkway/561', {
     waitUntil: 'networkidle2',
   });
 
@@ -48,7 +48,7 @@ const getMSMeatData = async () => {
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
   console.log('browser started');
-  await page.goto(process.env.MARKET_STREET_URL, {
+  await page.goto('https://www.marketstreetunited.com/rs/store-locator/6100-w-eldorado-parkway/561', {
     waitUntil: 'networkidle2',
   });
 
