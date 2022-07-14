@@ -25,3 +25,5 @@
 ### example request
 
 #### localhost:3001/api/groceryitems?q=family&store=walmart&minor_category=groundBeef
+
+more notes
