@@ -1,0 +1,263 @@
+[
+  {
+    "name": "Kroger 80% Lean Ground Beef",
+    "unitSize": "3 lb",
+    "totalPrice": "13.99",
+    "pricePerOz": 0.29,
+    "store": "kroger",
+    "mainCategory": "meat",
+    "minorCategory": "beef"
+  },
+  {
+    "name": "Kroger® 80/20 Ground Beef Roll",
+    "unitSize": "3 lb",
+    "totalPrice": "5.97",
+    "pricePerOz": 0.12,
+    "store": "kroger",
+    "mainCategory": "meat",
+    "minorCategory": "beef"
+  },
+  {
+    "name": "Mori-Nu® Silken Firm Tofu",
+    "unitSize": "12.3 oz",
+    "totalPrice": "2.29",
+    "pricePerOz": 0.19,
+    "store": "kroger",
+    "mainCategory": "meat",
+    "minorCategory": "beef"
+  },
+  {
+    "name": "Kroger® 73/27 Ground Beef Roll",
+    "unitSize": "1 lb",
+    "totalPrice": "4.39",
+    "pricePerOz": 0.27,
+    "store": "kroger",
+    "mainCategory": "meat",
+    "minorCategory": "beef"
+  },
+  {
+    "name": "Mori-Nu Silken Extra Firm Tofu",
+    "unitSize": "12.3 oz",
+    "totalPrice": "2.29",
+    "pricePerOz": 0.19,
+    "store": "kroger",
+    "mainCategory": "meat",
+    "minorCategory": "beef"
+  },
+  {
+    "name": "SunFed Ranch 100% Grass Fed 90% Lean Organic Ground Beef",
+    "unitSize": "1 lb",
+    "totalPrice": "10.49",
+    "pricePerOz": 0.66,
+    "store": "kroger",
+    "mainCategory": "meat",
+    "minorCategory": "beef"
+  },
+  {
+    "name": "SunFed Ranch 100% Grass Fed 80% Lean Organic Ground Beef Brick",
+    "unitSize": "1 lb",
+    "totalPrice": "9.49",
+    "pricePerOz": 0.59,
+    "store": "kroger",
+    "mainCategory": "meat",
+    "minorCategory": "beef"
+  },
+  {
+    "name": "Private Selection® 80/20 Angus Ground Beef",
+    "unitSize": "1 lb",
+    "totalPrice": "5.49",
+    "pricePerOz": 0.34,
+    "store": "kroger",
+    "mainCategory": "meat",
+    "minorCategory": "beef"
+  },
+  {
+    "name": "Kroger® Beef Shaved Steak",
+    "unitSize": "14 oz",
+    "totalPrice": "6.99",
+    "pricePerOz": 0.5,
+    "store": "kroger",
+    "mainCategory": "meat",
+    "minorCategory": "beef"
+  },
+  {
+    "name": "Beef Choice Boneless Ribeye Steak (1 Steak)",
+    "unitSize": "$13.99/lb",
+    "totalPrice": "12.03",
+    "pricePerOz": 0.06,
+    "store": "kroger",
+    "mainCategory": "meat",
+    "minorCategory": "beef"
+  },
+  {
+    "name": "Meat District The O.G.Beef Patties 4 Count",
+    "unitSize": "1 lb",
+    "totalPrice": "9.59",
+    "pricePerOz": 0.6,
+    "store": "kroger",
+    "mainCategory": "meat",
+    "minorCategory": "beef"
+  },
+  {
+    "name": "Laura's Lean Beef® All Natural Ground Beef",
+    "unitSize": "16 oz",
+    "totalPrice": "8.49",
+    "pricePerOz": 0.53,
+    "store": "kroger",
+    "mainCategory": "meat",
+    "minorCategory": "beef"
+  },
+  {
+    "name": "Simple Truth Organic™ 85% Lean Grass Fed Ground Beef",
+    "unitSize": "1 lb",
+    "totalPrice": "7.49",
+    "pricePerOz": 0.47,
+    "store": "kroger",
+    "mainCategory": "meat",
+    "minorCategory": "beef"
+  },
+  {
+    "name": "Beef Choice T-Bone Steak Value Pack (2-3 Steaks per Pack)",
+    "unitSize": "$10.99/lb",
+    "totalPrice": "27.48",
+    "pricePerOz": 0.17,
+    "store": "kroger",
+    "mainCategory": "meat",
+    "minorCategory": "beef"
+  },
+  {
+    "name": "Private Selection® 90/10 Lean Angus Ground Beef Patties",
+    "unitSize": "4 ct / 16 oz",
+    "totalPrice": "7.99",
+    "pricePerOz": 2,
+    "store": "kroger",
+    "mainCategory": "meat",
+    "minorCategory": "beef"
+  },
+  {
+    "name": "Simple Truth Organic™ 90% Lean Grass Fed Ground Beef",
+    "unitSize": "16 oz",
+    "totalPrice": "8.99",
+    "pricePerOz": 0.56,
+    "store": "kroger",
+    "mainCategory": "meat",
+    "minorCategory": "beef"
+  },
+  {
+    "name": "Impossible Burger",
+    "unitSize": "12 oz",
+    "totalPrice": "7.99",
+    "pricePerOz": 0.67,
+    "store": "kroger",
+    "mainCategory": "meat",
+    "minorCategory": "beef"
+  },
+  {
+    "name": "Nolan Ryan Beef Chuck Roast (1 Roast)",
+    "unitSize": "$6.99/lb",
+    "totalPrice": "16.29",
+    "pricePerOz": 0.17,
+    "store": "kroger",
+    "mainCategory": "meat",
+    "minorCategory": "beef"
+  },
+  {
+    "name": "Kroger® 100% Pure Beef Quarter Pound Burgers",
+    "unitSize": "8 ct / 32 oz",
+    "totalPrice": "8.99",
+    "pricePerOz": 1.12,
+    "store": "kroger",
+    "mainCategory": "meat",
+    "minorCategory": "beef"
+  },
+  {
+    "name": "Impossible Burger Plant-Based Made From Plants Patties",
+    "unitSize": "8 oz",
+    "totalPrice": "4.99",
+    "pricePerOz": 0.62,
+    "store": "kroger",
+    "mainCategory": "meat",
+    "minorCategory": "beef"
+  },
+  {
+    "name": "Nolan Ryan 90% Lean Angus Ground Beef",
+    "unitSize": "1 lb",
+    "totalPrice": "6.99",
+    "pricePerOz": 0.44,
+    "store": "kroger",
+    "mainCategory": "meat",
+    "minorCategory": "beef"
+  },
+  {
+    "name": "Beef Cubed Steaks",
+    "unitSize": "$6.99/lb",
+    "totalPrice": "5.17",
+    "pricePerOz": 0.05,
+    "store": "kroger",
+    "mainCategory": "meat",
+    "minorCategory": "beef"
+  },
+  {
+    "name": "Beef Choice Top Sirloin Steak (1 Steak)",
+    "unitSize": "$9.99/lb",
+    "totalPrice": "12.59",
+    "pricePerOz": 0.09,
+    "store": "kroger",
+    "mainCategory": "meat",
+    "minorCategory": "beef"
+  },
+  {
+    "name": "Simple Truth Organic® Grass Fed Ground Beef",
+    "unitSize": "3 ct / 1 lb",
+    "totalPrice": "18.99",
+    "pricePerOz": 6.33,
+    "store": "kroger",
+    "mainCategory": "meat",
+    "minorCategory": "beef"
+  },
+  {
+    "name": "Schweid & Sons Signature Series Chuck Brisket Burger Patties",
+    "unitSize": "4 ct / 5.3 oz",
+    "totalPrice": "9.99",
+    "pricePerOz": 2.5,
+    "store": "kroger",
+    "mainCategory": "meat",
+    "minorCategory": "beef"
+  },
+  {
+    "name": "Kroger® Beef for Stew (In Store Cut)",
+    "unitSize": "$6.99/lb",
+    "totalPrice": "9.09",
+    "pricePerOz": 0.09,
+    "store": "kroger",
+    "mainCategory": "meat",
+    "minorCategory": "beef"
+  },
+  {
+    "name": "Schweid & Sons Butcher's Blend Burger Patties",
+    "unitSize": "4 ct / 5.3 oz",
+    "totalPrice": "9.99",
+    "pricePerOz": 2.5,
+    "store": "kroger",
+    "mainCategory": "meat",
+    "minorCategory": "beef"
+  },
+  {
+    "name": "Beef Choice Boneless Ribeye Steak Value Pack (About 3-4 Steaks per Pack)",
+    "unitSize": "$12.99/lb",
+    "totalPrice": "31.57",
+    "pricePerOz": 0.16,
+    "store": "kroger",
+    "mainCategory": "meat",
+    "minorCategory": "beef"
+  },
+  {
+    "name": "Private Selection® Applewood Smoked Bacon & Cheddar Angus Beef Patties",
+    "unitSize": "6 ct / 32 oz",
+    "totalPrice": "10.99",
+    "pricePerOz": 1.83,
+    "store": "kroger",
+    "mainCategory": "meat",
+    "minorCategory": "beef"
+  }
+]
