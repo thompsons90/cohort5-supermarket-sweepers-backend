@@ -12,6 +12,47 @@ let password = process.env.KROGER_PASSWORD;
 
 // <button aria-label="Close pop-up" class="kds-DismissalButton kds-Modal-closeButton"></button>
 
+const getGroceryItemData = async (page, targetURL, mainCategory, minorCategory) => {
+  await page.goto(targetURL, {
+    waitUntil: 'networkidle2',
+  });
+
+  const groceryItemCards = await page.$$('.kds-Card');
+  console.log('groceryItemCards', groceryItemCards);
+  let groceryItemData = [];
+
+  for (let i = 0; i < groceryItemCards.length; i++) {
+    let name, unitSize, totalPrice, pricePerOz;
+
+    try {
+      // Total price returns undefined sometimes
+      totalPrice = await groceryItemCards[i].$eval('[data-qa="cart-page-item-unit-price"]', (el) =>
+        el.getAttribute('value'),
+      );
+      name = await groceryItemCards[i].$eval('[data-qa="cart-page-item-description"]', (el) => el.textContent);
+      unitSize = await groceryItemCards[i].$eval('[data-qa="cart-page-item-sizing"]', (el) => el.textContent);
+    } catch (err) {
+      console.log(err);
+    }
+
+    pricePerOz = calculatePricePerOz(unitSize, Number(totalPrice));
+
+    if (name && unitSize && totalPrice) {
+      groceryItemData.push({
+        name,
+        unitSize,
+        totalPrice: Number(totalPrice),
+        pricePerOz: pricePerOz,
+        store: 'kroger',
+        mainCategory,
+        minorCategory,
+      });
+    }
+  }
+
+  fs.writeFileSync(`${minorCategory}Data.json`, JSON.stringify(groceryItemData));
+};
+
 const getKrogerData = async () => {
   const browser = await puppeteer.launch({ args: ['--disable-web-security'], headless: false });
   const page = await browser.newPage();
@@ -35,6 +76,8 @@ const getKrogerData = async () => {
 
   console.log('signed in');
 
+  // await getGroceryItemData(page, 'https://www.kroger.com/pl/beef/05001', 'meat', 'beef');
+
   await page.goto('https://www.kroger.com/pl/beef/05001', {
     waitUntil: 'networkidle2',
   });
@@ -48,21 +91,21 @@ const getKrogerData = async () => {
     let name, unitSize, totalPrice, pricePerOz;
 
     try {
+      // Total price returns undefined sometimes
       totalPrice = await beefCards[i].$eval('[data-qa="cart-page-item-unit-price"]', (el) => el.getAttribute('value'));
-      totalPrice = Number(totalPrice);
       name = await beefCards[i].$eval('[data-qa="cart-page-item-description"]', (el) => el.textContent);
       unitSize = await beefCards[i].$eval('[data-qa="cart-page-item-sizing"]', (el) => el.textContent);
     } catch (err) {
       console.log(err);
     }
 
-    pricePerOz = calculatePricePerOz(unitSize, totalPrice);
+    pricePerOz = calculatePricePerOz(unitSize, Number(totalPrice));
 
     if (name && unitSize && totalPrice) {
       beefData.push({
         name,
         unitSize,
-        totalPrice,
+        totalPrice: Number(totalPrice),
         pricePerOz: pricePerOz,
         store: 'kroger',
         mainCategory: 'meat',
