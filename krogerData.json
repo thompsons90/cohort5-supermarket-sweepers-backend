@@ -1,0 +1,74 @@
+[
+  {
+    "id": 0,
+    "name": "Kroger® 80/20 Ground Beef Roll",
+    "pricePerPound": 4.79,
+    "store": "kroger",
+    "category": "meat",
+    "type": "groundBeef",
+    "option": "80/20"
+  },
+  {
+    "id": 1,
+    "name": "Kroger® 80/20 Ground Beef Roll",
+    "pricePerPound": 4.33,
+    "store": "kroger",
+    "category": "meat",
+    "type": "groundBeef",
+    "option": "80/20"
+  },
+  {
+    "id": 3,
+    "name": "Private Selection® 80/20 Angus Ground Beef",
+    "pricePerPound": 5.49,
+    "store": "kroger",
+    "category": "meat",
+    "type": "groundBeef",
+    "option": "80/20"
+  },
+  {
+    "id": 4,
+    "name": "Kroger® Homestyle 80/20 Ground Beef Patties",
+    "pricePerPound": 4.55,
+    "store": "kroger",
+    "category": "meat",
+    "type": "groundBeef",
+    "option": "80/20"
+  },
+  {
+    "id": 5,
+    "name": "Kroger® Homestyle 80/20 Ground Beef Patties",
+    "pricePerPound": 5.83,
+    "store": "kroger",
+    "category": "meat",
+    "type": "groundBeef",
+    "option": "80/20"
+  },
+  {
+    "id": 7,
+    "name": "SunFed Ranch 100% Grass Fed 80% Lean Organic Ground Beef Brick",
+    "pricePerPound": 9.49,
+    "store": "kroger",
+    "category": "meat",
+    "type": "groundBeef",
+    "option": "80/20"
+  },
+  {
+    "id": 0,
+    "name": "Kroger® 93/7 Lean Ground Beef",
+    "pricePerPound": 5.99,
+    "store": "kroger",
+    "category": "meat",
+    "type": "groundBeef",
+    "option": "93/7"
+  },
+  {
+    "id": 1,
+    "name": "Kroger® 93/7 Lean Ground Beef Roll",
+    "pricePerPound": 6.79,
+    "store": "kroger",
+    "category": "meat",
+    "type": "groundBeef",
+    "option": "93/7"
+  }
+]
