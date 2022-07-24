@@ -10,12 +10,14 @@ let email = process.env.EMAIL;
 let password = process.env.KROGER_PASSWORD;
 
 const getPricePerLb = (totalPrice, unitSize) => {
-  let poundRegex = /\d*[\.,]?\d[^a-zA-Z0-9]*? lbs?/gi;
-  let ouncesRegex = /\d*[\.,]?\d[^a-zA-Z0-9]*? oz/gi;
+  let poundRegex = /\d*[\.,]?\d*[^a-zA-Z0-9]*? lbs?/gi;
+  let ouncesRegex = /\d*[\.,]?\d*[^a-zA-Z0-9]*? oz/gi;
   let numOnly = /\d*[\.,]?\d[^a-zA-Z0-9]*?/gi;
   let unitSizeAsNum = 0;
 
-  if (unitSize.includes('lb')) {
+  if (unitSize.includes('$') && unitSize.includes('/lb')) {
+    return Number(unitSize.slice(1, unitSize.length - 3));
+  } else if (unitSize.includes('lb')) {
     let extractedUnitSize = unitSize.match(poundRegex)[0];
     unitSizeAsNum = Number(extractedUnitSize.match(numOnly));
   } else if (unitSize.includes('oz')) {
@@ -37,7 +39,7 @@ const searchAndExtractData = async (page, searchURL, store, category, type, opti
   let itemData = [];
 
   for (let i = 0; i < itemCards.length; i++) {
-    let name, unitSize, totalPrice;
+    let name, unitSize, totalPrice, onlineOnly;
 
     try {
       // Total price returns undefined sometimes
@@ -45,10 +47,22 @@ const searchAndExtractData = async (page, searchURL, store, category, type, opti
       name = await itemCards[i].$eval('[data-qa="cart-page-item-description"]', (el) => el.textContent);
       unitSize = await itemCards[i].$eval('[data-qa="cart-page-item-sizing"]', (el) => el.textContent);
     } catch (err) {
-      console.log(err);
+      // console.log(err);
     }
 
-    if (totalPrice && unitSize) {
+    // Gets rid of ship or delivery only products
+    try {
+      onlineOnly = await itemCards[i].$eval('.flex .kds-Tag .kds-Tag-text', (el) => el.textContent);
+    } catch (err) {
+      // console.log(err);
+    }
+
+    // Some dog treats come up on bacon search
+    if (name && name.toLowerCase().includes('dog treats')) {
+      continue;
+    }
+
+    if (totalPrice && name && unitSize && !onlineOnly) {
       let pricePerPound = getPricePerLb(Number(totalPrice), unitSize);
 
       if (pricePerPound) {
@@ -113,6 +127,42 @@ const getKrogerData = async () => {
     'meat',
     'groundBeef',
     '93/7',
+  );
+
+  await searchAndExtractData(
+    page,
+    'https://www.kroger.com/search?query=chicken%20thighs&searchType=default_search',
+    'kroger',
+    'meat',
+    'chicken',
+    'thighs',
+  );
+
+  await searchAndExtractData(
+    page,
+    'https://www.kroger.com/search?query=boneless%20skinless%20chicken%20breast&searchType=default_search',
+    'kroger',
+    'meat',
+    'chicken',
+    'breast',
+  );
+
+  await searchAndExtractData(
+    page,
+    'https://www.kroger.com/search?query=pork%20chop%20loin&searchType=default_search',
+    'kroger',
+    'meat',
+    'pork',
+    'porkChops',
+  );
+
+  await searchAndExtractData(
+    page,
+    'https://www.kroger.com/search?query=thick%20cut%20bacon&searchType=partials',
+    'kroger',
+    'meat',
+    'pork',
+    'bacon',
   );
 
   await browser.close();
