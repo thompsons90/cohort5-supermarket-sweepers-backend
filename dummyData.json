@@ -2,12 +2,11 @@
   "groceryItems": [
     {
       "name": "93% Ground Beef Family Pack",
-      "unitSize": "2.5 lb",
-      "totalPrice": 15.48,
-      "pricePerOz": 0.39,
+      "pricePerLb": 0.39,
       "store": "marketstreet",
-      "mainCategory": "meat",
-      "minorCategory": "groundBeef"
+      "category": "meat",
+      "type": "groundBeef",
+      "option": "80/20"
     },
     {
       "name": "93% Ground Beef Small Pack",
