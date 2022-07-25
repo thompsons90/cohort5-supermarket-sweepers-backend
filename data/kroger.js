@@ -67,7 +67,6 @@ const searchAndExtractData = async (page, searchURL, store, category, type, opti
 
       if (pricePerPound) {
         itemData.push({
-          id: i,
           name,
           pricePerPound,
           store,
