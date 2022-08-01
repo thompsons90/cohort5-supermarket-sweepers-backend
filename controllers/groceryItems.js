@@ -32,37 +32,31 @@ const db = getFirestore();
 
 ///Async functions that get data from fireStore for the groceryItems in the routes folder
 exports.getMeatDataCollectionFromFirestore = async (req, res) => {
-  // let documentRef = db.collection('meatData').doc('meat');
   let documentRef = db.collection('meatData');
-  let doc = await documentRef.get();
-  console.log(doc);
-  // doc = doc._fieldsProto.combinedJSON.arrayValue.values;
+  let query = documentRef;
+
+  if (req.query && req.query.store) {
+    query = documentRef.where('store', '==', req.query.store);
+  }
+
+  if (req.query && req.query.type) {
+    query = documentRef.where('type', '==', req.query.type);
+  }
+
+  if (req.query && req.query.option) {
+    query = documentRef.where('option', '==', req.query.option);
+  }
+
+  // query = documentRef.orderBy('pricePerLb', 'asc');
+
+  let doc = await query.get();
 
   let formattedData = [];
   doc.forEach((item) => {
     formattedData.push(item.data());
   });
 
-  console.log(formattedData);
-  ///Express Queries
-  if (req.query && req.query.store) {
-    let store = req.query.store;
-    doc = await doc.filter((item) => item.mapValue.fields.store.stringValue === store);
-  }
-  if (req.query && req.query.name) {
-    let name = req.query.name;
-    doc = await doc.filter((item) => item.mapValue.fields.name.stringValue === name);
-  }
-  if (req.query && req.query.type) {
-    let type = req.query.type;
-    doc = await doc.filter((item) => item.mapValue.fields.type.stringValue === type);
-  }
-  if (req.query && req.query.option) {
-    let option = req.query.option;
-    doc = await doc.filter((item) => item.mapValue.fields.option.stringValue === option);
-  }
-
-  res.send(formattedData);
+  res.status(200).json({ totalResults: formattedData.length, results: formattedData });
 };
 
 exports.getWalmartCollectionFromFirestore = async (req, res) => {
