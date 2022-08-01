@@ -4,7 +4,7 @@ const fs = require('fs');
 const { getFirestore } = require('firebase-admin/firestore');
 const { initializeApp, cert } = require('firebase-admin/app');
 initializeApp({
-  credential: cert('./controllers/serviceAccount.json')
+  credential: cert('./controllers/serviceAccount.json'),
 });
 const db = getFirestore();
 
@@ -31,71 +31,79 @@ const db = getFirestore();
 // };
 
 ///Async functions that get data from fireStore for the groceryItems in the routes folder
-exports.getMeatDataCollectionFromFirestore = async(req, res) =>{
-  let documentRef = db.collection('meatData').doc('meat');
+exports.getMeatDataCollectionFromFirestore = async (req, res) => {
+  // let documentRef = db.collection('meatData').doc('meat');
+  let documentRef = db.collection('meatData');
   let doc = await documentRef.get();
-  doc = doc._fieldsProto.combinedJSON.arrayValue.values
+  console.log(doc);
+  // doc = doc._fieldsProto.combinedJSON.arrayValue.values;
 
+  let formattedData = [];
+  doc.forEach((item) => {
+    formattedData.push(item.data());
+  });
+
+  console.log(formattedData);
   ///Express Queries
-  if(req.query && req.query.store){
-    let store = req.query.store
-    doc = await doc.filter((item) => item.mapValue.fields.store.stringValue === store)
+  if (req.query && req.query.store) {
+    let store = req.query.store;
+    doc = await doc.filter((item) => item.mapValue.fields.store.stringValue === store);
   }
-  if(req.query && req.query.name){
-    let name = req.query.name
-    doc = await doc.filter((item) => item.mapValue.fields.name.stringValue === name)
+  if (req.query && req.query.name) {
+    let name = req.query.name;
+    doc = await doc.filter((item) => item.mapValue.fields.name.stringValue === name);
   }
-  if(req.query && req.query.type){
-    let type = req.query.type
-    doc = await doc.filter((item) => item.mapValue.fields.type.stringValue === type)
+  if (req.query && req.query.type) {
+    let type = req.query.type;
+    doc = await doc.filter((item) => item.mapValue.fields.type.stringValue === type);
   }
-  if(req.query && req.query.option){
-    let option = req.query.option
-    doc = await doc.filter((item) => item.mapValue.fields.option.stringValue === option)
+  if (req.query && req.query.option) {
+    let option = req.query.option;
+    doc = await doc.filter((item) => item.mapValue.fields.option.stringValue === option);
   }
 
-  res.send(doc)
-}
+  res.send(formattedData);
+};
 
-exports.getWalmartCollectionFromFirestore = async(req, res) =>{
+exports.getWalmartCollectionFromFirestore = async (req, res) => {
   let documentRef = db.collection('Walmart').doc('meat');
   let doc = await documentRef.get();
-  doc = doc._fieldsProto.walmartJSON.arrayValue.values
+  doc = doc._fieldsProto.walmartJSON.arrayValue.values;
 
   ///Express Queries
-  if(req.query && req.query.name){
-    let name = req.query.name
-    doc = await doc.filter((item) => item.mapValue.fields.name.stringValue === name)
+  if (req.query && req.query.name) {
+    let name = req.query.name;
+    doc = await doc.filter((item) => item.mapValue.fields.name.stringValue === name);
   }
-  if(req.query && req.query.type){
-    let type = req.query.type
-    doc = await doc.filter((item) => item.mapValue.fields.type.stringValue === type)
+  if (req.query && req.query.type) {
+    let type = req.query.type;
+    doc = await doc.filter((item) => item.mapValue.fields.type.stringValue === type);
   }
-  if(req.query && req.query.option){
-    let option = req.query.option
-    doc = await doc.filter((item) => item.mapValue.fields.option.stringValue === option)
+  if (req.query && req.query.option) {
+    let option = req.query.option;
+    doc = await doc.filter((item) => item.mapValue.fields.option.stringValue === option);
   }
 
-  res.send(doc)
-}
+  res.send(doc);
+};
 
-exports.getKrogerCollectionFromFirestore = async(req, res) =>{
+exports.getKrogerCollectionFromFirestore = async (req, res) => {
   let documentRef = db.collection('Kroger').doc('meat');
   let doc = await documentRef.get();
 
   ///Express Queries
-  if(req.query && req.query.name){
-    let name = req.query.name
-    doc = await doc.filter((item) => item.mapValue.fields.name.stringValue === name)
+  if (req.query && req.query.name) {
+    let name = req.query.name;
+    doc = await doc.filter((item) => item.mapValue.fields.name.stringValue === name);
   }
-  if(req.query && req.query.type){
-    let type = req.query.type
-    doc = await doc.filter((item) => item.mapValue.fields.type.stringValue === type)
+  if (req.query && req.query.type) {
+    let type = req.query.type;
+    doc = await doc.filter((item) => item.mapValue.fields.type.stringValue === type);
   }
-  if(req.query && req.query.option){
-    let option = req.query.option
-    doc = await doc.filter((item) => item.mapValue.fields.option.stringValue === option)
+  if (req.query && req.query.option) {
+    let option = req.query.option;
+    doc = await doc.filter((item) => item.mapValue.fields.option.stringValue === option);
   }
 
-  res.send(doc)
-}
+  res.send(doc);
+};
