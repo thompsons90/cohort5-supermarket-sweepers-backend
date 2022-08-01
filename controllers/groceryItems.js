@@ -1,11 +1,17 @@
 const fs = require('fs');
+require('dotenv').config();
 
 ///Initialize Firestore
 const { getFirestore } = require('firebase-admin/firestore');
 const { initializeApp, cert } = require('firebase-admin/app');
+
 initializeApp({
   credential: cert('./controllers/serviceAccount.json'),
 });
+
+///
+///JSON.parse(process.env.FIREBASE_CONFIG)
+
 const db = getFirestore();
 
 ///Async functions that get data from fireStore for the groceryItems in the routes folder
