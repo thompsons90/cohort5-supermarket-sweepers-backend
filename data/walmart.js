@@ -62,20 +62,24 @@ getWalmartChickenData = async () => {
 
       if (meatName.includes('breast') || meatName.includes('Breast')) {
         meatOption = 'breast';
+        // console.log(item)
       }
       if (
         meatName.includes('leg') ||
         meatName.includes('Leg') ||
         meatName.includes('drum') ||
-        meatName.includes('Drum')
+        meatName.includes('Drum') ||
+        meatName.includes('Thigh') ||
+        meatName.includes('thigh')
       ) {
-        meatOption = 'drum';
+        meatOption = 'thighs';
+        // console.log(item)
       }
 
       if (meatOption !== undefined) {
         tempMeatData.push({
           name: meatName,
-          pricePerLb: pricePerPound,
+          pricePerLb: parseFloat(pricePerPound),
           store: 'walmart',
           category: 'meat',
           type: 'pork',
@@ -148,14 +152,22 @@ getWalmartPorkData = async () => {
       if (meatName.includes('chop') || meatName.includes('Chop')) {
         meatOption = 'porkchop';
       }
-      if (meatName.includes('bacon') || meatName.includes('Bacon')) {
+      if (
+        (meatName.includes('bacon') || meatName.includes('Bacon')) &&
+        (!meatName.includes('bits') ||
+          !meatName.includes('Bits') ||
+          !meatName.includes('Brat') ||
+          !meatName.includes('brat') ||
+          !meatName.includes('patties') ||
+          !meatName.includes('patties'))
+      ) {
         meatOption = 'bacon';
       }
 
       if (meatOption !== undefined) {
         tempMeatData.push({
           name: meatName,
-          pricePerLb: pricePerPound,
+          pricePerLb: parseFloat(pricePerPound),
           store: 'walmart',
           category: 'meat',
           type: 'pork',
@@ -237,10 +249,10 @@ const getWalmartGroundBeefData = async () => {
       if (meatOption !== undefined) {
         tempMeatData.push({
           name: meatName,
-          pricePerLb: pricePerPound,
+          pricePerLb: parseFloat(pricePerPound),
           store: 'walmart',
           category: 'meat',
-          type: 'beef',
+          type: 'groundBeef',
           option: meatOption,
         });
       }
@@ -260,6 +272,13 @@ function getPricePerPound(item) {
   let positionOfPricePerPound = getPositionOfNthElement(item, '$', 3);
   let stringAfterMoney = item.substring(positionOfPricePerPound);
   let indexOfDecimal = stringAfterMoney.indexOf('.');
+
+  if (parseFloat(stringAfterMoney.substring(1, indexOfDecimal + 3)).toFixed(2) === null) {
+    positionOfPricePerPound = getPositionOfNthElement(item, '$', 2);
+    stringAfterMoney = item.substring(positionOfPricePerPound);
+
+    return parseFloat(stringAfterMoney.substring(1, indexOfDecimal + 3)).toFixed(2);
+  }
 
   ///Returns float of just the price
   return parseFloat(stringAfterMoney.substring(1, indexOfDecimal + 3)).toFixed(2);
