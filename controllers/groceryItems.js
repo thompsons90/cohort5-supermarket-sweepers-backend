@@ -6,7 +6,7 @@ const { getFirestore } = require('firebase-admin/firestore');
 const { initializeApp, cert } = require('firebase-admin/app');
 
 initializeApp({
-  credential: cert('./controllers/serviceAccount.json'),
+  credential: cert(JSON.parse(process.env.FIREBASE_CONFIG)),
 });
 
 ///
