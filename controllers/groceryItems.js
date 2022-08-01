@@ -8,33 +8,13 @@ initializeApp({
 });
 const db = getFirestore();
 
-// exports.getGroceryItems = (req, res) => {
-//   const { groceryItems } = JSON.parse(fs.readFileSync('dummyData.json', 'utf-8'));
-//   let searchResults = groceryItems;
-
-//   if (req.query && req.query.q) {
-//     let q = req.query.q;
-//     searchResults = searchResults.filter((item) => item.name.toLowerCase().includes(q));
-//   }
-
-//   if (req.query && req.query.store) {
-//     let store = req.query.store;
-//     searchResults = searchResults.filter((item) => item.store === store);
-//   }
-
-//   if (req.query && req.query.type) {
-//     let type = req.query.type;
-//     searchResults = searchResults.filter((item) => item.type === type);
-//   }
-
-//   res.status(200).json({ groceryItems: searchResults, numResults: searchResults.length });
-// };
-
 ///Async functions that get data from fireStore for the groceryItems in the routes folder
 exports.getMeatDataCollectionFromFirestore = async (req, res) => {
   let documentRef = db.collection('meatData');
+  let searchString = undefined;
   let query = documentRef;
 
+  // applies filters
   if (req.query && req.query.store) {
     query = documentRef.where('store', '==', req.query.store);
   }
@@ -47,16 +27,36 @@ exports.getMeatDataCollectionFromFirestore = async (req, res) => {
     query = documentRef.where('option', '==', req.query.option);
   }
 
-  // query = documentRef.orderBy('pricePerLb', 'asc');
+  if (req.query && req.query.order) {
+    let orderInfo = req.query.order.split('-');
+    query = documentRef.orderBy(orderInfo[0], orderInfo[1]);
+  }
 
-  let doc = await query.get();
+  if (req.query && req.query.q) {
+    searchString = req.query.q;
+  }
 
-  let formattedData = [];
-  doc.forEach((item) => {
-    formattedData.push(item.data());
-  });
+  try {
+    let results = await query.get();
 
-  res.status(200).json({ totalResults: formattedData.length, results: formattedData });
+    let formattedData = [];
+    results.forEach((item) => {
+      let formattedItem = item.data();
+
+      if (searchString) {
+        if (formattedItem.name.toLowerCase().includes(searchString.toLowerCase())) {
+          formattedData.push(formattedItem);
+        }
+      } else {
+        formattedData.push(formattedItem);
+      }
+    });
+
+    res.status(200).json({ totalResults: formattedData.length, results: formattedData });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json({ message: 'Error fetching the data.' });
+  }
 };
 
 exports.getWalmartCollectionFromFirestore = async (req, res) => {

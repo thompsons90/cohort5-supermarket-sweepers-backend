@@ -1,7 +1,7 @@
 [
   {
     "name": "Kroger® 80/20 Ground Beef Roll",
-    "pricePerPound": 4.79,
+    "pricePerLb": 4.79,
     "store": "kroger",
     "category": "meat",
     "type": "groundBeef",
@@ -9,7 +9,7 @@
   },
   {
     "name": "Private Selection® 80/20 Angus Ground Beef",
-    "pricePerPound": 5.49,
+    "pricePerLb": 5.49,
     "store": "kroger",
     "category": "meat",
     "type": "groundBeef",
@@ -17,7 +17,7 @@
   },
   {
     "name": "Kroger® 80/20 Ground Beef Roll",
-    "pricePerPound": 4.33,
+    "pricePerLb": 4.33,
     "store": "kroger",
     "category": "meat",
     "type": "groundBeef",
@@ -25,7 +25,7 @@
   },
   {
     "name": "Kroger® Homestyle 80/20 Ground Beef Patties",
-    "pricePerPound": 4.55,
+    "pricePerLb": 4.55,
     "store": "kroger",
     "category": "meat",
     "type": "groundBeef",
@@ -33,7 +33,7 @@
   },
   {
     "name": "Kroger® Homestyle 80/20 Ground Beef Patties",
-    "pricePerPound": 5.83,
+    "pricePerLb": 5.83,
     "store": "kroger",
     "category": "meat",
     "type": "groundBeef",
@@ -41,7 +41,7 @@
   },
   {
     "name": "SunFed Ranch 100% Grass Fed 80% Lean Organic Ground Beef Brick",
-    "pricePerPound": 9.49,
+    "pricePerLb": 9.49,
     "store": "kroger",
     "category": "meat",
     "type": "groundBeef",
@@ -49,7 +49,7 @@
   },
   {
     "name": "Kroger® 93/7 Lean Ground Beef",
-    "pricePerPound": 5.99,
+    "pricePerLb": 5.99,
     "store": "kroger",
     "category": "meat",
     "type": "groundBeef",
@@ -57,7 +57,7 @@
   },
   {
     "name": "Kroger® 93/7 Lean Ground Beef Roll",
-    "pricePerPound": 6.79,
+    "pricePerLb": 6.79,
     "store": "kroger",
     "category": "meat",
     "type": "groundBeef",
@@ -65,7 +65,7 @@
   },
   {
     "name": "Heritage Farm™ Boneless & Skinless Chicken Thighs",
-    "pricePerPound": 3.29,
+    "pricePerLb": 3.29,
     "store": "kroger",
     "category": "meat",
     "type": "chicken",
@@ -73,7 +73,7 @@
   },
   {
     "name": "Heritage Farm Bone In & Skin On Chicken Thighs",
-    "pricePerPound": 1.79,
+    "pricePerLb": 1.79,
     "store": "kroger",
     "category": "meat",
     "type": "chicken",
@@ -81,7 +81,7 @@
   },
   {
     "name": "Simple Truth™ Boneless & Skinless Natural Chicken Thighs",
-    "pricePerPound": 5.49,
+    "pricePerLb": 5.49,
     "store": "kroger",
     "category": "meat",
     "type": "chicken",
@@ -89,7 +89,7 @@
   },
   {
     "name": "Tyson All Natural Fresh Chicken Thighs",
-    "pricePerPound": 2.49,
+    "pricePerLb": 2.49,
     "store": "kroger",
     "category": "meat",
     "type": "chicken",
@@ -97,7 +97,7 @@
   },
   {
     "name": "Tyson All Natural Fresh Boneless Skinless Chicken Thighs",
-    "pricePerPound": 3.99,
+    "pricePerLb": 3.99,
     "store": "kroger",
     "category": "meat",
     "type": "chicken",
@@ -105,7 +105,7 @@
   },
   {
     "name": "Simple Truth Organic™ Free Range Boneless & Skinless Chicken Thighs (About 4 per Pack)",
-    "pricePerPound": 6.49,
+    "pricePerLb": 6.49,
     "store": "kroger",
     "category": "meat",
     "type": "chicken",
@@ -113,7 +113,7 @@
   },
   {
     "name": "Heritage Farm® Bone In & Skin On Chicken Drumsticks",
-    "pricePerPound": 1.79,
+    "pricePerLb": 1.79,
     "store": "kroger",
     "category": "meat",
     "type": "chicken",
@@ -121,7 +121,7 @@
   },
   {
     "name": "Heritage Farm® Chicken Leg Quarters",
-    "pricePerPound": 0.69,
+    "pricePerLb": 0.69,
     "store": "kroger",
     "category": "meat",
     "type": "chicken",
@@ -129,7 +129,7 @@
   },
   {
     "name": "Home Chef Parmesan Breaded Chicken Bites",
-    "pricePerPound": 7.99,
+    "pricePerLb": 7.99,
     "store": "kroger",
     "category": "meat",
     "type": "chicken",
@@ -137,7 +137,7 @@
   },
   {
     "name": "Tyson All Natural Fresh Chicken Drumsticks",
-    "pricePerPound": 2.49,
+    "pricePerLb": 2.49,
     "store": "kroger",
     "category": "meat",
     "type": "chicken",
@@ -145,7 +145,7 @@
   },
   {
     "name": "Heritage Farm® Chicken Wings Bone In & Skin On (14-17 per Pack)",
-    "pricePerPound": 4.29,
+    "pricePerLb": 4.29,
     "store": "kroger",
     "category": "meat",
     "type": "chicken",
@@ -153,7 +153,7 @@
   },
   {
     "name": "Fried Chicken Thigh (NOT AVAILABLE BEFORE 11:00 am DAILY)",
-    "pricePerPound": 1.79,
+    "pricePerLb": 1.79,
     "store": "kroger",
     "category": "meat",
     "type": "chicken",
@@ -161,7 +161,7 @@
   },
   {
     "name": "Texas Meat Packers Seasoned Chicken Thighs for Fajitas",
-    "pricePerPound": 3.5,
+    "pricePerLb": 3.5,
     "store": "kroger",
     "category": "meat",
     "type": "chicken",
@@ -169,7 +169,7 @@
   },
   {
     "name": "Tyson All Natural Fresh Chicken Wings",
-    "pricePerPound": 4.79,
+    "pricePerLb": 4.79,
     "store": "kroger",
     "category": "meat",
     "type": "chicken",
@@ -177,7 +177,7 @@
   },
   {
     "name": "Heritage Farm® Boneless & Skinless Chicken Breasts with Rib Meat",
-    "pricePerPound": 2.99,
+    "pricePerLb": 2.99,
     "store": "kroger",
     "category": "meat",
     "type": "chicken",
@@ -185,7 +185,7 @@
   },
   {
     "name": "Simple Truth™ Natural Raised Cage Free Boneless & Skinless Chicken Breast",
-    "pricePerPound": 4.49,
+    "pricePerLb": 4.49,
     "store": "kroger",
     "category": "meat",
     "type": "chicken",
@@ -193,7 +193,7 @@
   },
   {
     "name": "Simple Truth™ Natural Raised Cage Free Boneless & Skinless Chicken Breast Tenders",
-    "pricePerPound": 7.99,
+    "pricePerLb": 7.99,
     "store": "kroger",
     "category": "meat",
     "type": "chicken",
@@ -201,7 +201,7 @@
   },
   {
     "name": "Simple Truth Organic® Free Range Boneless & Skinless Chicken Breast with Rib Meat (2-3 per Pack)",
-    "pricePerPound": 6.99,
+    "pricePerLb": 6.99,
     "store": "kroger",
     "category": "meat",
     "type": "chicken",
@@ -209,7 +209,7 @@
   },
   {
     "name": "La Herencia Pollo Asado Boneless Skinless Chicken Breast",
-    "pricePerPound": 7.99,
+    "pricePerLb": 7.99,
     "store": "kroger",
     "category": "meat",
     "type": "chicken",
@@ -217,7 +217,7 @@
   },
   {
     "name": "La Herencia Chili Lime Cilantro Boneless Skinless Chicken Breast",
-    "pricePerPound": 7.99,
+    "pricePerLb": 7.99,
     "store": "kroger",
     "category": "meat",
     "type": "chicken",
@@ -225,7 +225,7 @@
   },
   {
     "name": "Tyson All Natural Fresh Boneless Skinless Chicken Breasts",
-    "pricePerPound": 3.99,
+    "pricePerLb": 3.99,
     "store": "kroger",
     "category": "meat",
     "type": "chicken",
@@ -233,7 +233,7 @@
   },
   {
     "name": "Simple Truth™ Boneless & Skinless Natural Chicken Breasts",
-    "pricePerPound": 3.99,
+    "pricePerLb": 3.99,
     "store": "kroger",
     "category": "meat",
     "type": "chicken",
@@ -241,7 +241,7 @@
   },
   {
     "name": "Heritage Farm Thin Sliced Boneless & Skinless Chicken Breasts",
-    "pricePerPound": 3.99,
+    "pricePerLb": 3.99,
     "store": "kroger",
     "category": "meat",
     "type": "chicken",
@@ -249,7 +249,7 @@
   },
   {
     "name": "Tyson® All Natural Fresh Boneless Skinless Chicken Breasts",
-    "pricePerPound": 3.49,
+    "pricePerLb": 3.49,
     "store": "kroger",
     "category": "meat",
     "type": "chicken",
@@ -257,7 +257,7 @@
   },
   {
     "name": "Tyson® All Natural Boneless Skinless Chicken Breasts",
-    "pricePerPound": 4.5,
+    "pricePerLb": 4.5,
     "store": "kroger",
     "category": "meat",
     "type": "chicken",
@@ -265,7 +265,7 @@
   },
   {
     "name": "Eddy Cilantro Lime Seasoned Boneless & Skinless Chicken Breast",
-    "pricePerPound": 6.66,
+    "pricePerLb": 6.66,
     "store": "kroger",
     "category": "meat",
     "type": "chicken",
@@ -273,7 +273,7 @@
   },
   {
     "name": "Heritage Farm™ Boneless & Skinless Chicken Tenderloins (10-12 per Pack)",
-    "pricePerPound": 4.49,
+    "pricePerLb": 4.49,
     "store": "kroger",
     "category": "meat",
     "type": "chicken",
@@ -281,7 +281,7 @@
   },
   {
     "name": "Eddy Italian Style Seasoned Boneless & Skinless Chicken Breast",
-    "pricePerPound": 6.66,
+    "pricePerLb": 6.66,
     "store": "kroger",
     "category": "meat",
     "type": "chicken",
@@ -289,7 +289,7 @@
   },
   {
     "name": "Kroger® Boneless Skinless Chicken Breast Portions with Rib Meat",
-    "pricePerPound": 3,
+    "pricePerLb": 3,
     "store": "kroger",
     "category": "meat",
     "type": "chicken",
@@ -297,7 +297,7 @@
   },
   {
     "name": "Tyson® Boneless Skinless Chicken Breast Tenderloins",
-    "pricePerPound": 5,
+    "pricePerLb": 5,
     "store": "kroger",
     "category": "meat",
     "type": "chicken",
@@ -305,7 +305,7 @@
   },
   {
     "name": "Kroger® Boneless Skinless Chicken Tenderloins",
-    "pricePerPound": 5.6,
+    "pricePerLb": 5.6,
     "store": "kroger",
     "category": "meat",
     "type": "chicken",
@@ -313,7 +313,7 @@
   },
   {
     "name": "Boar's Head Chipotle Savory Boneless Skinless Chicken Breast",
-    "pricePerPound": 14.49,
+    "pricePerLb": 14.49,
     "store": "kroger",
     "category": "meat",
     "type": "chicken",
@@ -321,7 +321,7 @@
   },
   {
     "name": "Kroger® Boneless Skinless Chicken Breasts with Rib Meat",
-    "pricePerPound": 4.33,
+    "pricePerLb": 4.33,
     "store": "kroger",
     "category": "meat",
     "type": "chicken",
@@ -329,7 +329,7 @@
   },
   {
     "name": "Boneless Pork Loin Chops (about 3 per pack)",
-    "pricePerPound": 4.49,
+    "pricePerLb": 4.49,
     "store": "kroger",
     "category": "meat",
     "type": "pork",
@@ -337,7 +337,7 @@
   },
   {
     "name": "Boneless Pork Loin Chops Thin Cut (about 10 per pack)",
-    "pricePerPound": 4.99,
+    "pricePerLb": 4.99,
     "store": "kroger",
     "category": "meat",
     "type": "pork",
@@ -345,7 +345,7 @@
   },
   {
     "name": "Boneless Pork Loin Chops (about 10 per pack)",
-    "pricePerPound": 4.8,
+    "pricePerLb": 4.8,
     "store": "kroger",
     "category": "meat",
     "type": "pork",
@@ -353,7 +353,7 @@
   },
   {
     "name": "Pork Loin Boneless Center Cut Thick Pork Chops",
-    "pricePerPound": 5.49,
+    "pricePerLb": 5.49,
     "store": "kroger",
     "category": "meat",
     "type": "pork",
@@ -361,7 +361,7 @@
   },
   {
     "name": "Thin Cut Bone-In Pork Loin Center-Cut Chop",
-    "pricePerPound": 5.99,
+    "pricePerLb": 5.99,
     "store": "kroger",
     "category": "meat",
     "type": "pork",
@@ -369,7 +369,7 @@
   },
   {
     "name": "Smithfield Thick Cut Naturally Hickory Smoked Bacon",
-    "pricePerPound": 6.99,
+    "pricePerLb": 6.99,
     "store": "kroger",
     "category": "meat",
     "type": "pork",
@@ -377,7 +377,7 @@
   },
   {
     "name": "Kroger® Thick Cut Naturally Hardwood Smoked Bacon",
-    "pricePerPound": 4.69,
+    "pricePerLb": 4.69,
     "store": "kroger",
     "category": "meat",
     "type": "pork",
@@ -385,7 +385,7 @@
   },
   {
     "name": "Oscar Mayer Naturally Hardwood Smoked Thick Cut Bacon",
-    "pricePerPound": 8.99,
+    "pricePerLb": 8.99,
     "store": "kroger",
     "category": "meat",
     "type": "pork",
@@ -393,7 +393,7 @@
   },
   {
     "name": "Private Selection® Extra Thick Center Cut Bacon",
-    "pricePerPound": 8.65,
+    "pricePerLb": 8.65,
     "store": "kroger",
     "category": "meat",
     "type": "pork",
@@ -401,7 +401,7 @@
   },
   {
     "name": "Simple Truth® Thick Cut Uncured Hardwood Smoked Bacon",
-    "pricePerPound": 7.59,
+    "pricePerLb": 7.59,
     "store": "kroger",
     "category": "meat",
     "type": "pork",
@@ -409,7 +409,7 @@
   },
   {
     "name": "Greenfield Natural* Meat Co. No Sugar Thick Cut Smoked Uncured Bacon",
-    "pricePerPound": 9.32,
+    "pricePerLb": 9.32,
     "store": "kroger",
     "category": "meat",
     "type": "pork",
@@ -417,7 +417,7 @@
   },
   {
     "name": "Hormel® Black Label Jalapeno Thick Cut Bacon",
-    "pricePerPound": 10.65,
+    "pricePerLb": 10.65,
     "store": "kroger",
     "category": "meat",
     "type": "pork",
@@ -425,7 +425,7 @@
   },
   {
     "name": "Villari Foods Hickory Hardwood Smoked Thick Cut Bacon",
-    "pricePerPound": 7.99,
+    "pricePerLb": 7.99,
     "store": "kroger",
     "category": "meat",
     "type": "pork",
@@ -433,7 +433,7 @@
   },
   {
     "name": "Villari Foods Applewood Smoked Thick Cut Bacon",
-    "pricePerPound": 7.99,
+    "pricePerLb": 7.99,
     "store": "kroger",
     "category": "meat",
     "type": "pork",
@@ -441,7 +441,7 @@
   },
   {
     "name": "Boar's Head Butcher Craft Thick Cut Bacon",
-    "pricePerPound": 7.99,
+    "pricePerLb": 7.99,
     "store": "kroger",
     "category": "meat",
     "type": "pork",
@@ -449,7 +449,7 @@
   },
   {
     "name": "Old Wisconsin Turkey Sausage Sticks",
-    "pricePerPound": 10.98,
+    "pricePerLb": 10.98,
     "store": "kroger",
     "category": "meat",
     "type": "pork",

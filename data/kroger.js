@@ -63,12 +63,12 @@ const searchAndExtractData = async (page, searchURL, store, category, type, opti
     }
 
     if (totalPrice && name && unitSize && !onlineOnly) {
-      let pricePerPound = getPricePerLb(Number(totalPrice), unitSize);
+      let pricePerLb = getPricePerLb(Number(totalPrice), unitSize);
 
-      if (pricePerPound) {
+      if (pricePerLb) {
         itemData.push({
           name,
-          pricePerPound,
+          pricePerLb,
           store,
           category,
           type,

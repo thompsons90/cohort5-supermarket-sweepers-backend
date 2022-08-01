@@ -82,7 +82,7 @@ getWalmartChickenData = async () => {
           pricePerLb: parseFloat(pricePerPound),
           store: 'walmart',
           category: 'meat',
-          type: 'pork',
+          type: 'chicken',
           option: meatOption,
         });
       }
