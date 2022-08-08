@@ -20,26 +20,28 @@ exports.getMeatDataCollectionFromFirestore = async (req, res) => {
   let searchString = undefined;
   let query = documentRef;
 
-  // applies filters
+  // // applies filters
+
   if (req.query && req.query.store) {
-    query = documentRef.where('store', '==', req.query.store);
+    query = query.where('store', '==', req.query.store);
   }
 
   if (req.query && req.query.type) {
-    query = documentRef.where('type', '==', req.query.type);
+    query = query.where('type', '==', req.query.type);
   }
 
   if (req.query && req.query.option) {
-    query = documentRef.where('option', '==', req.query.option);
-  }
-
-  if (req.query && req.query.order) {
-    let orderInfo = req.query.order.split('-');
-    query = documentRef.orderBy(orderInfo[0], orderInfo[1]);
+    query = query.where('option', '==', req.query.option);
   }
 
   if (req.query && req.query.q) {
     searchString = req.query.q;
+  }
+
+  /* Note this order by clause will not work when chaining to where statements */
+  if (req.query && req.query.order) {
+    let orderInfo = req.query.order.split('-');
+    query = query.orderBy(orderInfo[0], orderInfo[1]);
   }
 
   try {
