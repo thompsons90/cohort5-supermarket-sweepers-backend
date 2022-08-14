@@ -41,11 +41,12 @@ exports.getMeatDataCollectionFromFirestore = async (req, res) => {
   /* Note this order by clause will not work when chaining to where statements */
   if (req.query && req.query.order) {
     let orderInfo = req.query.order.split('-');
+    console.log(orderInfo)
     query = query.orderBy(orderInfo[0], orderInfo[1]);
   }
 
   try {
-    let results = await query.get();
+    let results = await query.limit(25).get();
 
     let formattedData = [];
     results.forEach((item) => {
