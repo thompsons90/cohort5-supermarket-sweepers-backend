@@ -1,4 +1,5 @@
 const fs = require('fs');
+require('dotenv').config({path: "../.env"});
 const { initializeApp, cert } = require('firebase-admin/app');
 const { getFirestore } = require('firebase-admin/firestore');
 
@@ -8,8 +9,10 @@ const { getFirestore } = require('firebase-admin/firestore');
 var walmartJSON = require('../data/walmartJSON.json');
 let krogerJSON = require('../krogerData.json');
 
+console.log(__dirname)
+
 initializeApp({
-  credential: cert('./serviceAccount.json'),
+  credential: cert(JSON.parse(process.env.FIREBASE_CONFIG)),
 });
 const db = getFirestore();
 
@@ -29,13 +32,13 @@ async function exportKrogerDataToKrogerCollection() {
   //await docRef.set({krogerJSON});
 }
 async function exportAllJSONToMeatDataCollection() {
-  // const docRef = db.collection('meatData').doc('meat');
+  const docRef = db.collection('meatInOneDoc').doc('meatData');
   let combinedData = [...walmartJSON, ...krogerJSON];
-  console.log(combinedData);
 
-  for (let i = 0; i < combinedData.length; i++) {
-    db.collection('meatData').add(combinedData[i]);
-  }
+  await docRef.set({combinedData})
+  // for (let i = 0; i < combinedData.length; i++) {
+  //   db.collection('meatData').add(combinedData[i]);
+  // }
 
   //await docRef.set(combinedJSON);
 
