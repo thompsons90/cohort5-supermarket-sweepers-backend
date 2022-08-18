@@ -35,7 +35,8 @@ async function exportAllJSONToMeatDataCollection() {
   const docRef = db.collection('meatInOneDoc').doc('meatData');
   let combinedData = [...walmartJSON, ...krogerJSON];
 
-  await docRef.set({combinedData})
+  console.log(combinedData.length)
+  // await docRef.set({combinedData})
   // for (let i = 0; i < combinedData.length; i++) {
   //   db.collection('meatData').add(combinedData[i]);
   // }
