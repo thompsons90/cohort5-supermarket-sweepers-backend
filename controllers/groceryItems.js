@@ -46,7 +46,7 @@ exports.getMeatDataCollectionFromFirestore = async (req, res) => {
   }
 
   try {
-    let results = await query.limit(25).get();
+    let results = await query.get();
 
     let formattedData = [];
     results.forEach((item) => {
